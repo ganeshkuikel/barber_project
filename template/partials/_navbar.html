@@ -1,0 +1,47 @@
+{% load static %}
+
+
+              <!-- Sidebar-wrapper -->
+        <div id="sidebar-wrapper">
+			<div class="side-top">
+				<div class="logo-sidebar">
+					<a href="{% url 'index' %}"><img src="{% static 'images/logos/logo.png' %}" alt="image"></a>
+				</div>
+				<ul class="sidebar-nav">
+					<li><a  {% if  '/' == request.path %}
+                   			 class="active"
+						    {% else %}
+						     class="nav-item mr-3"
+                  			{% endif %}  href="{% url 'index' %}">Home</a></li>
+					<li><a {% if  'about' in request.path %}
+                   			 class="active"
+						    {% else %}
+						     class="nav-item mr-3"
+                  			{% endif %}
+							href="{% url 'about' %}">About Us</a></li>
+					<li><a  {% if  'services' in request.path %}
+                   			 class="active"
+						    {% else %}
+						     class="nav-item mr-3"
+                  			{% endif %} href="{% url 'services' %}">Our Services</a></li>
+					<li><a {% if  'barbers' in request.path %}
+                   			 class="active"
+						    {% else %}
+						     class="nav-item mr-3"
+                  			{% endif %}
+							href="{% url 'barbers'%}">Our Barbers</a></li>
+					<li><a {% if  'appointment' in request.path %}
+                   			 class="active"
+						    {% else %}
+						     class="nav-item mr-3"
+                  			{% endif %}
+							href="{% url 'appointment' %}">Appointment</a></li>
+					<li><a {% if  'contact' in request.path %}
+                   			 class="active"
+						    {% else %}
+						     class="nav-item mr-3"
+                  			{% endif %} href="{% url 'contact' %}">Contact</a></li>
+				</ul>
+			</div>
+        </div>
+        <!-- End Sidebar-wrapper -->

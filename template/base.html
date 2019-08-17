@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- Basic -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!-- Mobile Metas -->
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+         <!-- Site Metas -->
+        <title>SMBarber Shop</title>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Site Icons -->
+        <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="{% static 'image/x-icon' %}" />
+        <link rel="apple-touch-icon" href="{% static 'images/apple-touch-icon.png' %}">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <!-- Site CSS -->
+        <link rel="stylesheet" href="{% static 'css/style.css'%}">
+        <!-- Colors CSS -->
+        <link rel="stylesheet" href="{% static 'css/colors.css'%}">
+        <!-- ALL VERSION CSS -->
+        <link rel="stylesheet" href="{% static 'css/versions.css'%}">
+        <!-- Responsive CSS -->
+        <link rel="stylesheet" href="{% static 'css/responsive.css'%}">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="{% static 'css/custom.css'%}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+<!--     <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">-->
+<!--     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>-->
+<!--      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>-->
+
+</head>
+    <body class="barber_version">
+     <!-- LOADER -->
+    <div id="preloader">
+        <div class="cube-wrapper">
+		  <div class="cube-folding">
+			<span class="leaf1"></span>
+			<span class="leaf2"></span>
+			<span class="leaf3"></span>
+			<span class="leaf4"></span>
+		  </div>
+		  <span class="loading" data-name="Loading">SMBarber Loading</span>
+		</div>
+    </div><!-- end loader -->
+    <!-- END LOADER -->
+      <div id="wrapper">
+          <!--  Side bar -->
+          {% include 'partials/_navbar.html' %}
+          <div id="page-content-wrapper">
+              <a href="#menu-toggle" class="menuopener" id="menu-toggle"><i class="fa fa-bars"></i></a>
+
+    <!--    Main Content-->
+        {% block content  %}
+        {% endblock %}
+
+    <!--    Footer-->
+        {% include 'partials/_footer.html '%}
+          </div>
+              </div><!-- end wrapper -->
+     <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+     <!-- ALL JS FILES -->
+        <script src="{% static 'js/all.js' %}"></script>
+        <script src="{% static 'js/responsive-tabs.js' %}"></script>
+        <!-- ALL PLUGINS -->
+        <script src="{% static 'js/custom.js' %}"></script>
+
+        <!-- Menu Toggle Script -->
+
+    </body>
+    </html>
